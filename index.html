@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lissabeauty</title>
+
+<style>
+:root {
+    --rosa: #ff5da2;
+    --lilas: #c77dff;
+    --bg: #fdf2f8;
+    --escuro: #333;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--escuro);
+}
+
+header {
+    
+    background: linear-gradient(135deg, #b009b6, #ff5da2);
+    padding: 10px 10px 15px; /* bem mais compacto */
+    text-align: center;
+    color: white;
+    height: 250px;         
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    padding: 5px 10px;
+    
+    
+}
+    
+
+.logo {
+    max-height: 600px;     
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin-top: 60px;
+}
+
+
+
+header h1 {
+    margin: 5px 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+
+
+/* CATÁLOGO */
+.catalogo {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+/* CARD PRODUTO */
+.produto {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.produto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* SELO */
+.selo {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--rosa);
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* IMAGEM */
+.produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* CONTEÚDO */
+.produto .info {
+    padding: 15px;
+    text-align: center;
+}
+
+.produto h3 {
+    color: var(--lilas);
+    margin: 10px 0 5px;
+}
+
+.produto p {
+    font-size: 14px;
+    color: #666;
+}
+
+.preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--rosa);
+    margin: 10px 0;
+}
+
+/* BOTÃO */
+.botao {
+    display: block;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #c77dff, #ff5da2);
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.botao:hover {
+    opacity: 0.85;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+   <img 
+  src="imagens/logo.png"
+  class="logo"
+  alt="Logo Lissabeauty"
+>
+
+   
+
+    
+</header>
+
+<section class="catalogo" id="catalogo">
+
+    <div class="produto" data-categoria="olhos">
+        <span class="selo">Mais vendido</span>
+        <img src="imagens/kit esponja make.jpeg">
+        <div class="info">
+            <h3>Kit Esponja p/ MAKE</h3>
+            <p>Pequena no tamanho, Gigante no acabamento 💖</p>
+            <div class="preco">R$ 15,00</div>
+            <a href="https://wa.me/message/MXZWLOZ5I2FBO1"
+            class="botao"
+            target="_blank"
+            class="botao">Comprar no WhatsApp</a>
+
+        </div>
+    </div>
+
+    <div class="produto" data-categoria="labios">
+        <img src="imagens/cilios.jpeg">
+        <div class="info">
+            <h3>Cílios Postiço </h3>
+            <p>Eleva o Olhar com Naturalidade</p>
+            <div class="preco">R$ 15,00</div>
+            <a href="https://wa.me/message/MXZWLOZ5I2FBO1"
+            class="botao"
+            target="_blank"
+            class="botao">Comprar no WhatsApp</a>
+            
+        </div>
+    </div>
+
+    <div class="produto" data-categoria="olhos">
+        <img src="imagens/kitesponjaprofissional.jpeg" alt="Kit Esponja">
+        <div class="info">
+            <h3>Kit de Esponja Profissional</h3>
+            <p>Natural e Proficional</p>
+            <div class="preco">R$ 15,00</div>
+            <a href="https://wa.me/message/MXZWLOZ5I2FBO1"
+            class="botao"
+            target="_blank"
+            class="botao">Comprar no WhatsApp</a>
+
+        </div>
+    </div>
+
+    <div class="produto" data-categoria="labios">
+        <img src="imagens/faixa de cabelo.jpeg">
+        <div class="info">
+            <h3>Faixa de Cabelo</h3>
+            <p>Confortável e aveludado e Fofo </p>
+            <div class="preco">R$ 5,00</div>
+            <a href="https://wa.me/message/MXZWLOZ5I2FBO1"
+            class="botao"
+            target="_blank"
+            class="botao">Comprar no WhatsApp</a>
+
+        </div>
+    </div>
+    
+    <div class="produto" data-categoria="labios">
+        <img src="imagens/mini pincel.webp">
+        <div class="info">
+            <h3>Kit Mini Pincel</h3>
+            <p>Toque suave e Preciso </p>
+            <div class="preco">R$ 10,00</div>
+            <a href="https://wa.me/message/MXZWLOZ5I2FBO1"
+            class="botao"
+            target="_blank"
+            class="botao">Comprar no WhatsApp</a>
+            
+        </div>
+    </div>
+
+    <div class="produto" data-categoria="labios">
+        <img src="imagens/lapis.png">
+        <div class="info">
+            <h3>Lapis Preto</h3>
+            <p>Intensifique seu Olhar Com Prescisão e Elegância</p>
+            <div class="preco">R$ 5,00</div>
+            <a href="https://wa.me/message/MXZWLOZ5I2FBO1"
+            class="botao"
+            target="_blank"
+            class="botao">Comprar no WhatsApp</a>
+            
+        </div>
+    </div>
+    <div class="produto" data-categoria="labios">
+        <img src="imagens/navalhas.png">
+        <div class="info">
+            <h3>Kit Navalha </h3>
+            <p>Acabamento Preciso Para um Design Impecável</p>
+            <div class="preco">R$ 10,00</div>
+            <a href="https://wa.me/message/MXZWLOZ5I2FBO1"
+            class="botao"
+            target="_blank"
+            class="botao">Comprar no WhatsApp</a>
+            
+        </div>
+    </div>
+
+
+</section>
+
+
+</script>
+
+</body>
+</html>
